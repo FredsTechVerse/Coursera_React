@@ -11,6 +11,7 @@ class App extends React.Component {
       dishes: DISHES
     };
   }
+  //THE RENDER METHOD RETURNS A DESCRIPTION OF WHAT THE VIRTUAL DOM SHOULD LOOK LIKE AND THEN REACT LIKE ACTUALISES IT TO THE BROWSER DOM.
   render() {
     return (
       <div className="App">

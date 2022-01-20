@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Media ,Card, CardImg, CardImgOverlay, CardText, CardBody,
+import {Card, CardImg, CardImgOverlay, CardText, CardBody,
     CardTitle } from 'reactstrap';
-
+import DishSelected from './DishDetail'
 
 class Menu extends Component {
 
@@ -12,11 +12,11 @@ class Menu extends Component {
             selectedDish: null
         }
     }
-
+// SET THE STATE VALUE TO THE SPECIFIC DISH OBJECT ONCE A DISH IS CLICKED.
     onDishSelect(dish) {
         this.setState({ selectedDish: dish});
     }
-
+//ITS JOB IS TO RENDER THE DISH DETAILS SELECTED.
     renderDish(dish) {
         if (dish != null)
             return(
@@ -35,6 +35,7 @@ class Menu extends Component {
     }
 
     render() {
+        //ARROW FUNCTION THAT IS USED TO RENDER ALL THE DISH OBJECTS IN THE DISH DETAIL STATE.
         const menu = this.props.dishes.map((dish) => {
             return (
               <div  className="col-12 col-md-5 m-1">
@@ -48,7 +49,8 @@ class Menu extends Component {
               </div>
             );
         });
-
+// FIRST WE START BY RENDERING ALL THE DISHES VIA THE MAP METHOD THEN A CONTAINER FOR THE SELECTED DISH
+// When the user clicks on a particular dish , the local state dish property is set to the dish object. 
         return (
             <div className="container">
                 <div className="row">
@@ -56,7 +58,12 @@ class Menu extends Component {
                 </div>
                 <div className="row">
                   <div  className="col-12 col-md-5 m-1">
-                    {this.renderDish(this.state.selectedDish)}
+
+            <DishSelected dish={this.state.selectedDish} />
+
+            {/* THIS IS ALSO A VERY INTERESTING WAY OF RENDERING CONTENT. RENDERING IN A FUNCTION THEN CALLING IT WHERE YOU WANT IT TO BE AT. */}
+
+                    {/* {this.renderDish(this.state.selectedDish)} */}
                   </div>
 
                 </div>
