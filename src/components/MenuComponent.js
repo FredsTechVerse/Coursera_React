@@ -35,6 +35,7 @@ class Menu extends Component {
     }
 
     render() {
+        //SAFE ENVIROMENT FOR LIKE DOING SOME JAVASCRIPT SHIT B4 RENDERING JSX.
         //ARROW FUNCTION THAT IS USED TO RENDER ALL THE DISH OBJECTS IN THE DISH DETAIL STATE.
         const menu = this.props.dishes.map((dish) => {
             return (
@@ -57,14 +58,12 @@ class Menu extends Component {
                     {menu}
                 </div>
                 <div className="row">
-                  <div  className="col-12 col-md-5 m-1">
 
             <DishSelected dish={this.state.selectedDish} />
 
             {/* THIS IS ALSO A VERY INTERESTING WAY OF RENDERING CONTENT. RENDERING IN A FUNCTION THEN CALLING IT WHERE YOU WANT IT TO BE AT. */}
 
                     {/* {this.renderDish(this.state.selectedDish)} */}
-                  </div>
 
                 </div>
             </div>

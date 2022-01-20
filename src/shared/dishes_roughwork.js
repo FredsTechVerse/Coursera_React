@@ -1,5 +1,5 @@
-//PLAYING AROUND WITH THE VALUES THAT ARE ASSIGNED TO US.
-//========================================================
+//PLAYING AROUND WITH THE DISHES STATE DATA.
+//==========================================
 let dishes =
     [
         {
@@ -187,6 +187,8 @@ let dishes =
         }
     ];
 
+    //ISOLATED ONE OF THE DISHES INORDER TO KNOW HOW TO DEAL WITH THE COMMENTS.
+    //===============================================================
 let specDish =  {
         id: 2,
         name:'Vadonut',
@@ -234,18 +236,27 @@ let specDish =  {
         ]
         }
 
+    //PLAYING AROUND WITH THE MAP METHOD KIDOGO
+    //============================================
+        //Indeed the map method work. It returns all the elements needed.It doesn't ovewrite on them.
 
-// let comments = dishes.map((dish)=>{
+/* let comments = dishes.map((dish)=>{
 
-//     let {comments}= dish;
+    let {comments}= dish;
 
-//     return comments;
-// })
+    return comments;
+})*/
 
+//WE DESTRUCTURE THE COMMENT ARRAY AND THEN DESTRUCTURE IT FURTHER INTO INDIVIDUAL COMMENTS
+//===========================================================================================
+
+/*
 let {comments}= specDish;
 
 comments = comments.map((comment)=>{
     return comment.id;
 })
 
-console.log(comments);
+*/
+
+//console.log(comments);
